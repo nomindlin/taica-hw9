@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wiki 首頁</title>
+  <style>
+    :root { --fg:#1f2328; --muted:#6b7280; --line:#e5e7eb; --accent:#2563eb; --bg:#fafafa; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, "Noto Sans TC", "PingFang TC", sans-serif;
+           color:var(--fg); background:var(--bg); line-height:1.6; }
+    main { max-width: 760px; margin: 0 auto; padding: 48px 20px; }
+    h1 { margin: 0 0 4px; font-size: 1.8rem; }
+    .sub { color: var(--muted); margin: 0 0 24px; }
+    input { width:100%; padding:10px 12px; font-size:1rem; border:1px solid var(--line);
+            border-radius:8px; margin-bottom:16px; background:#fff; }
+    .pages { list-style:none; padding:0; margin:0; background:#fff; border:1px solid var(--line); border-radius:10px; }
+    .pages li { display:flex; justify-content:space-between; gap:12px; padding:12px 16px; border-top:1px solid var(--line); }
+    .pages li:first-child { border-top:none; }
+    .pages a { color:var(--accent); text-decoration:none; font-weight:500; }
+    .pages a:hover { text-decoration:underline; }
+    .path { color:var(--muted); font-size:.85rem; font-family: ui-monospace, monospace; }
+    .empty { color:var(--muted); padding:16px; border:1px dashed var(--line); border-radius:10px; }
+    footer { margin-top:32px; color:var(--muted); font-size:.85rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Wiki 首頁</h1>
+    <p class="sub">共 <span id="count">0</span> 個子頁面</p>
+    <input id="q" type="search" placeholder="搜尋頁面…" aria-label="搜尋頁面">
+
+    <!-- PAGES:START -->
+    <p class="empty">wiki/ 目前還沒有頁面。</p>
+    <!-- PAGES:END -->
+
+    <footer>清單由 <code>python3 scripts/build_index.py</code> 自動產生，規則見 agent.md。</footer>
+  </main>
+  <script>
+    document.getElementById('q').addEventListener('input', e => {
+      const q = e.target.value.toLowerCase();
+      document.querySelectorAll('.pages li').forEach(li => {
+        li.style.display = li.textContent.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
