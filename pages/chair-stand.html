@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="category" content="下肢肌力">
-  <meta name="description" content="最貼近生活的腿力訓練，幫助起身更輕鬆。">
-  <title>椅子坐站</title>
+  <meta name="description" content="強化大腿股四頭肌與臀大肌，讓長輩從沙發起身、上下樓梯與如廁更省力穩健。">
+  <title>椅子坐站訓練</title>
   <style>
     :root {
       --bg: #fdf6ec; --card: #ffffff; --fg: #2b1d12; --muted: #5c4632;
@@ -42,6 +42,27 @@
             width: 48px; height: 48px; border-radius: 50%; background: var(--accent); color: #fff;
             font-weight: 700; font-size: 24px; display: flex; align-items: center; justify-content: center; }
     .note { font-size: 18px; color: var(--muted); }
+    .en { font-size: 20px; color: var(--muted); font-weight: 400; display: block; }
+    p.mech { margin: 14px 0 0; }
+    ol.step-list li b.st { display: block; font-size: 22px; color: var(--accent); }
+    /* 選用區塊：建議訓練處方 */
+    section.rx { border-left-color: #7a4a12; }
+    section.rx h2 { color: #7a4a12; }
+    table.rx-table { width: 100%; border-collapse: collapse; }
+    table.rx-table th, table.rx-table td { text-align: left; padding: 12px 10px; border-bottom: 2px solid var(--line); vertical-align: top; }
+    table.rx-table th { width: 8em; color: #7a4a12; white-space: nowrap; }
+    table.rx-table td small { display: block; font-size: 18px; color: var(--muted); }
+    /* 選用區塊：難度調整 */
+    section.levels { border-left-color: #7a4a12; }
+    section.levels h2 { color: #7a4a12; }
+    .level-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .level { border: 2px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+    .level h3 { margin: 0 0 8px; font-size: 23px; }
+    .level.easy { background: var(--ok-soft); }
+    .level.easy h3 { color: var(--ok); }
+    .level.hard { background: var(--accent-soft); }
+    .level.hard h3 { color: var(--accent); }
+    @media (max-width: 640px) { .level-grid { grid-template-columns: 1fr; } table.rx-table th { width: 6em; } }
     footer { margin-top: 32px; padding-top: 20px; border-top: 2px solid var(--line); }
     footer p { font-size: 18px; color: var(--muted); }
   </style>
@@ -50,25 +71,27 @@
   <main>
     <a class="back" href="../index.html">← 返回首頁</a>
     <div class="tag">下肢肌力</div>
-    <h1>椅子坐站</h1>
-    <p class="lead">最貼近生活的腿力訓練，幫助起身更輕鬆。</p>
+    <h1>椅子坐站訓練<span class="en">Chair Stand / Sit-to-Stand Exercise</span></h1>
+    <p class="lead">強化大腿股四頭肌與臀大肌，讓長輩從沙發起身、上下樓梯與如廁更省力穩健。</p>
 
     <section class="goal">
       <h2>🎯 動作目標</h2>
       <ul>
-        <li>增強大腿前側（股四頭肌）與臀部肌力。</li>
-        <li>提升從椅子、床邊、馬桶起身的能力，維持行動獨立。</li>
+        <li>預防與改善高齡<strong>肌少症（Sarcopenia）</strong>的核心功能性下肢訓練。</li>
+        <li>強化大腿前側<strong>股四頭肌</strong>與<strong>臀大肌</strong>。</li>
+        <li>讓從沙發起身、上下樓梯與如廁更省力穩健。</li>
+        <li>降低起身時重心不穩而<strong>跌倒</strong>的風險。</li>
       </ul>
+      <p class="mech"><strong>為什麼有效？</strong>模擬日常「從椅子站起來」與「控制速度坐下」的動作，能刺激下肢快縮肌纖維（第 II 型肌纖維），提升下肢爆發力，以及髖、膝關節的動力鏈協調性。</p>
     </section>
 
     <section class="safety">
       <h2>⚠️ 安全注意事項</h2>
       <ul>
-        <li>使用穩固、無輪子的椅子，椅背靠牆，避免滑動。</li>
-        <li>旁邊有人陪同，或身旁有可扶的穩固物（如桌子、扶手）。</li>
-        <li>過程中保持呼吸，不要憋氣。</li>
-        <li>起身時膝蓋朝向腳尖，不要向內夾。</li>
-        <li>膝蓋疼痛、頭暈或血壓不穩時，請立即停止。</li>
+        <li><strong>椅子選擇：</strong>使用無輪子、有堅固椅背、高度適中（坐下時膝蓋約呈 90 度）的椅子。<strong>嚴禁使用辦公旋轉椅或過軟、過低的沙發。</strong></li>
+        <li><strong>靠牆固定：</strong>椅背緊靠穩固的牆壁，防止起身或坐下時椅子向後滑動。</li>
+        <li><strong>呼吸原則：起身吐氣、坐下吸氣。</strong>切勿憋氣用力，以免血壓瞬間升高。</li>
+        <li><strong>身體警訊：</strong>出現頭暈、胸悶、膝蓋劇烈刺痛或呼吸困難，請<strong>立即停止並坐下休息</strong>。</li>
         <li>如有疑慮或身體不適，請先諮詢醫師或物理治療師。</li>
       </ul>
     </section>
@@ -76,16 +99,41 @@
     <section class="steps">
       <h2>👣 執行步驟</h2>
       <ol class="step-list">
-        <li>坐在椅子前半部，雙腳平放地面，與肩同寬。</li>
-        <li>雙手交叉放在胸前；如果有困難，可以扶著椅子扶手。</li>
-        <li>身體微微向前傾，用雙腿的力量站起來，直到身體挺直。</li>
-        <li>慢慢坐回椅子，臀部輕輕碰到椅面。</li>
-        <li>重複 8–12 下為一組，休息 1 分鐘，共做 2–3 組。</li>
+        <li><b class="st">預備姿勢</b>坐在椅子前緣約二分之一至三分之一處，雙腳打開與肩同寬，腳跟略微向後收（位於膝蓋正下方或稍後方），雙手交叉抱於胸前。</li>
+        <li><b class="st">重心前傾</b>背部挺直不駝背，腹部核心微收，上半身慢慢向前傾，讓<strong>「鼻子超過腳尖」</strong>，把重心轉移到雙腳腳掌上。</li>
+        <li><b class="st">發力站起（吐氣）</b>腳跟與前腳掌均勻踩實地面，用大腿前側與臀部發力向上推起，直到身體完全站直、髖關節與膝關節伸直（<strong>膝蓋不鎖死</strong>）。</li>
+        <li><b class="st">控制坐下（吸氣）</b>臀部先向後推，膝蓋微彎，像<strong>「慢慢找椅子」</strong>一樣，花 <strong>2～3 秒</strong>有控制地緩慢坐回椅面，避免重重摔坐。</li>
       </ol>
     </section>
 
+    <section class="rx">
+      <h2>📋 建議訓練處方</h2>
+      <table class="rx-table">
+        <tr><th>每次組數</th><td>2～3 組</td></tr>
+        <tr><th>每組次數</th><td>8～12 下<small>肌力較弱者，可先從 5 下開始</small></td></tr>
+        <tr><th>組間休息</th><td>60～90 秒</td></tr>
+        <tr><th>每週頻率</th><td>每週 2～3 天<small>建議間隔一天，讓肌肉修復</small></td></tr>
+        <tr><th>強度標準</th><td>運動自覺強度（RPE）約 12～14 分<small>感覺「有點費力，但仍可順暢說話」</small></td></tr>
+      </table>
+    </section>
+
+    <section class="levels">
+      <h2>🔧 難度調整</h2>
+      <div class="level-grid">
+        <div class="level easy"><h3>⬇️ 退階版</h3><p class="note">肌力較弱或初學者</p><ul>
+          <li>雙手輕扶大腿前側借力。</li>
+          <li>使用有扶手的椅子，雙手輕推扶手輔助站起。</li>
+          <li>將椅子墊高（放一塊硬質坐墊）。</li>
+        </ul></div>
+        <div class="level hard"><h3>⬆️ 進階版</h3><p class="note">肌力較佳者</p><ul>
+          <li>站起後停留 1 秒，坐下放慢至 4 秒，增加離心收縮刺激。</li>
+          <li>雙手抱一瓶裝滿水的寶特瓶（約 1～2 公斤）增加負重。</li>
+        </ul></div>
+      </div>
+    </section>
+
     <footer>
-      <p>資料來源：<code>raw/2026-11-17-chair-stand.md</code></p>
+      <p>資料來源：<code>raw/2026-11-17-chair-stand-exercise.md</code></p>
       <a class="back" href="../index.html">← 返回首頁</a>
     </footer>
   </main>

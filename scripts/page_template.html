@@ -42,6 +42,27 @@
             width: 48px; height: 48px; border-radius: 50%; background: var(--accent); color: #fff;
             font-weight: 700; font-size: 24px; display: flex; align-items: center; justify-content: center; }
     .note { font-size: 18px; color: var(--muted); }
+    .en { font-size: 20px; color: var(--muted); font-weight: 400; display: block; }
+    p.mech { margin: 14px 0 0; }
+    ol.step-list li b.st { display: block; font-size: 22px; color: var(--accent); }
+    /* 選用區塊：建議訓練處方 */
+    section.rx { border-left-color: #7a4a12; }
+    section.rx h2 { color: #7a4a12; }
+    table.rx-table { width: 100%; border-collapse: collapse; }
+    table.rx-table th, table.rx-table td { text-align: left; padding: 12px 10px; border-bottom: 2px solid var(--line); vertical-align: top; }
+    table.rx-table th { width: 8em; color: #7a4a12; white-space: nowrap; }
+    table.rx-table td small { display: block; font-size: 18px; color: var(--muted); }
+    /* 選用區塊：難度調整 */
+    section.levels { border-left-color: #7a4a12; }
+    section.levels h2 { color: #7a4a12; }
+    .level-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .level { border: 2px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+    .level h3 { margin: 0 0 8px; font-size: 23px; }
+    .level.easy { background: var(--ok-soft); }
+    .level.easy h3 { color: var(--ok); }
+    .level.hard { background: var(--accent-soft); }
+    .level.hard h3 { color: var(--accent); }
+    @media (max-width: 640px) { .level-grid { grid-template-columns: 1fr; } table.rx-table th { width: 6em; } }
     footer { margin-top: 32px; padding-top: 20px; border-top: 2px solid var(--line); }
     footer p { font-size: 18px; color: var(--muted); }
   </style>
@@ -73,6 +94,23 @@
       <ol class="step-list">
         <li>{{步驟}}</li>
       </ol>
+    </section>
+
+    <!-- 選用區塊：原文有訓練處方時才保留 -->
+    <section class="rx">
+      <h2>📋 建議訓練處方</h2>
+      <table class="rx-table">
+        <tr><th>{{項目}}</th><td>{{內容}}<small>{{補充說明}}</small></td></tr>
+      </table>
+    </section>
+
+    <!-- 選用區塊：原文有難度調整時才保留 -->
+    <section class="levels">
+      <h2>🔧 難度調整</h2>
+      <div class="level-grid">
+        <div class="level easy"><h3>⬇️ 退階版</h3><ul><li>{{退階方式}}</li></ul></div>
+        <div class="level hard"><h3>⬆️ 進階版</h3><ul><li>{{進階方式}}</li></ul></div>
+      </div>
     </section>
 
     <footer>
