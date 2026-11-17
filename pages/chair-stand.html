@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="category" content="下肢肌力">
+  <meta name="description" content="最貼近生活的腿力訓練，幫助起身更輕鬆。">
+  <title>椅子坐站</title>
+  <style>
+    :root {
+      --bg: #fdf6ec; --card: #ffffff; --fg: #2b1d12; --muted: #5c4632;
+      --accent: #b4441f; --accent-soft: #fbe3d3; --warn: #8a1f11; --warn-soft: #fde2dc;
+      --ok: #3d5a1e; --ok-soft: #e7f0d8; --line: #e8d6c2;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--fg);
+           font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+           font-size: 20px; line-height: 1.8; }
+    main { max-width: 820px; margin: 0 auto; padding: 24px 20px 48px; }
+    .back { display: inline-flex; align-items: center; min-height: 52px; padding: 10px 22px;
+            background: var(--accent); color: #fff; font-size: 20px; font-weight: 700;
+            text-decoration: none; border-radius: 12px; }
+    .back:hover, .back:focus { background: #8f3216; outline: 3px solid #f0a37c; outline-offset: 2px; }
+    .tag { display: inline-block; margin-top: 24px; padding: 4px 14px; background: var(--accent-soft);
+           color: var(--accent); font-weight: 700; border-radius: 999px; font-size: 18px; }
+    h1 { font-size: 36px; line-height: 1.35; margin: 12px 0 8px; }
+    .lead { font-size: 22px; color: var(--muted); margin: 0 0 24px; }
+    section { background: var(--card); border: 2px solid var(--line); border-left-width: 10px;
+              border-radius: 14px; padding: 20px 24px; margin: 20px 0; }
+    h2 { font-size: 28px; margin: 0 0 12px; }
+    section.goal   { border-left-color: var(--ok); }
+    section.goal h2 { color: var(--ok); }
+    section.safety { border-left-color: var(--warn); background: var(--warn-soft); }
+    section.safety h2 { color: var(--warn); }
+    section.steps  { border-left-color: var(--accent); }
+    section.steps h2 { color: var(--accent); }
+    ul, ol { padding-left: 1.4em; margin: 0; }
+    li { margin: 8px 0; }
+    ol.step-list { list-style: none; padding: 0; counter-reset: s; }
+    ol.step-list li { counter-increment: s; position: relative; padding-left: 64px; margin: 18px 0; min-height: 48px; }
+    ol.step-list li::before { content: counter(s); position: absolute; left: 0; top: 0;
+            width: 48px; height: 48px; border-radius: 50%; background: var(--accent); color: #fff;
+            font-weight: 700; font-size: 24px; display: flex; align-items: center; justify-content: center; }
+    .note { font-size: 18px; color: var(--muted); }
+    footer { margin-top: 32px; padding-top: 20px; border-top: 2px solid var(--line); }
+    footer p { font-size: 18px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="../index.html">← 返回首頁</a>
+    <div class="tag">下肢肌力</div>
+    <h1>椅子坐站</h1>
+    <p class="lead">最貼近生活的腿力訓練，幫助起身更輕鬆。</p>
+
+    <section class="goal">
+      <h2>🎯 動作目標</h2>
+      <ul>
+        <li>增強大腿前側（股四頭肌）與臀部肌力。</li>
+        <li>提升從椅子、床邊、馬桶起身的能力，維持行動獨立。</li>
+      </ul>
+    </section>
+
+    <section class="safety">
+      <h2>⚠️ 安全注意事項</h2>
+      <ul>
+        <li>使用穩固、無輪子的椅子，椅背靠牆，避免滑動。</li>
+        <li>旁邊有人陪同，或身旁有可扶的穩固物（如桌子、扶手）。</li>
+        <li>過程中保持呼吸，不要憋氣。</li>
+        <li>起身時膝蓋朝向腳尖，不要向內夾。</li>
+        <li>膝蓋疼痛、頭暈或血壓不穩時，請立即停止。</li>
+        <li>如有疑慮或身體不適，請先諮詢醫師或物理治療師。</li>
+      </ul>
+    </section>
+
+    <section class="steps">
+      <h2>👣 執行步驟</h2>
+      <ol class="step-list">
+        <li>坐在椅子前半部，雙腳平放地面，與肩同寬。</li>
+        <li>雙手交叉放在胸前；如果有困難，可以扶著椅子扶手。</li>
+        <li>身體微微向前傾，用雙腿的力量站起來，直到身體挺直。</li>
+        <li>慢慢坐回椅子，臀部輕輕碰到椅面。</li>
+        <li>重複 8–12 下為一組，休息 1 分鐘，共做 2–3 組。</li>
+      </ol>
+    </section>
+
+    <footer>
+      <p>資料來源：<code>raw/2026-11-17-chair-stand.md</code></p>
+      <a class="back" href="../index.html">← 返回首頁</a>
+    </footer>
+  </main>
+</body>
+</html>

@@ -3,46 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wiki 首頁</title>
+  <title>高齡運動知識庫</title>
   <style>
-    :root { --fg:#1f2328; --muted:#6b7280; --line:#e5e7eb; --accent:#2563eb; --bg:#fafafa; }
+    :root {
+      --bg: #fdf6ec; --card: #ffffff; --fg: #2b1d12; --muted: #5c4632;
+      --accent: #b4441f; --accent-soft: #fbe3d3; --line: #e8d6c2;
+    }
     * { box-sizing: border-box; }
-    body { margin:0; font-family: system-ui, -apple-system, "Noto Sans TC", "PingFang TC", sans-serif;
-           color:var(--fg); background:var(--bg); line-height:1.6; }
-    main { max-width: 760px; margin: 0 auto; padding: 48px 20px; }
-    h1 { margin: 0 0 4px; font-size: 1.8rem; }
-    .sub { color: var(--muted); margin: 0 0 24px; }
-    input { width:100%; padding:10px 12px; font-size:1rem; border:1px solid var(--line);
-            border-radius:8px; margin-bottom:16px; background:#fff; }
-    .pages { list-style:none; padding:0; margin:0; background:#fff; border:1px solid var(--line); border-radius:10px; }
-    .pages li { display:flex; justify-content:space-between; gap:12px; padding:12px 16px; border-top:1px solid var(--line); }
-    .pages li:first-child { border-top:none; }
-    .pages a { color:var(--accent); text-decoration:none; font-weight:500; }
-    .pages a:hover { text-decoration:underline; }
-    .path { color:var(--muted); font-size:.85rem; font-family: ui-monospace, monospace; }
-    .empty { color:var(--muted); padding:16px; border:1px dashed var(--line); border-radius:10px; }
-    footer { margin-top:32px; color:var(--muted); font-size:.85rem; }
+    body { margin: 0; background: var(--bg); color: var(--fg);
+           font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+           font-size: 20px; line-height: 1.7; }
+    header { background: var(--accent); color: #fff; padding: 36px 20px; }
+    header .wrap, main { max-width: 1000px; margin: 0 auto; }
+    header h1 { margin: 0; font-size: 38px; }
+    header p { margin: 6px 0 0; font-size: 22px; }
+    main { padding: 16px 20px 48px; }
+    .cat { margin-top: 32px; }
+    .cat h2 { font-size: 30px; margin: 0 0 14px; padding-bottom: 8px; border-bottom: 3px solid var(--line);
+              display: flex; align-items: baseline; gap: 12px; }
+    .cat .n { font-size: 18px; color: var(--muted); font-weight: 400; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+    .card { display: flex; flex-direction: column; background: var(--card); border: 2px solid var(--line);
+            border-radius: 16px; padding: 20px 22px; text-decoration: none; color: var(--fg); min-height: 170px; }
+    .card:hover, .card:focus { border-color: var(--accent); box-shadow: 0 4px 14px rgba(180,68,31,.18);
+            outline: 3px solid #f0a37c; outline-offset: 2px; }
+    .card h3 { margin: 0 0 8px; font-size: 26px; color: var(--accent); }
+    .card p { margin: 0; flex: 1; font-size: 19px; color: var(--muted); }
+    .card .go { margin-top: 14px; font-weight: 700; color: var(--accent); }
+    .empty { color: var(--muted); font-size: 19px; padding: 14px 18px; border: 2px dashed var(--line); border-radius: 12px; margin: 0; }
+    footer { max-width: 1000px; margin: 0 auto; padding: 0 20px 40px; font-size: 18px; color: var(--muted); }
   </style>
 </head>
 <body>
+  <header>
+    <div class="wrap">
+      <h1>高齡運動知識庫</h1>
+      <p>給長輩與照護者的安全運動指南・共 <span id="count">1</span> 篇</p>
+    </div>
+  </header>
   <main>
-    <h1>Wiki 首頁</h1>
-    <p class="sub">共 <span id="count">0</span> 個子頁面</p>
-    <input id="q" type="search" placeholder="搜尋頁面…" aria-label="搜尋頁面">
-
-    <!-- PAGES:START -->
-    <p class="empty">wiki/ 目前還沒有頁面。</p>
-    <!-- PAGES:END -->
-
-    <footer>清單由 <code>python3 scripts/build_index.py</code> 自動產生，規則見 agent.md。</footer>
+    <!-- CARDS:START -->
+    <section class="cat">
+      <h2>🦵 下肢肌力<span class="n">1 篇</span></h2>
+      <div class="grid">
+        <a class="card" href="pages/chair-stand.html"><h3>椅子坐站</h3><p>最貼近生活的腿力訓練，幫助起身更輕鬆。</p><span class="go">閱讀 →</span></a>
+      </div>
+    </section>
+    <section class="cat">
+      <h2>🧍 平衡防跌<span class="n">0 篇</span></h2>
+      <p class="empty">尚無內容</p>
+    </section>
+    <section class="cat">
+      <h2>❤️ 心肺有氧<span class="n">0 篇</span></h2>
+      <p class="empty">尚無內容</p>
+    </section>
+    <section class="cat">
+      <h2>🤸 柔軟伸展<span class="n">0 篇</span></h2>
+      <p class="empty">尚無內容</p>
+    </section>
+    <section class="cat">
+      <h2>💪 上肢肌力<span class="n">0 篇</span></h2>
+      <p class="empty">尚無內容</p>
+    </section>
+    <!-- CARDS:END -->
   </main>
-  <script>
-    document.getElementById('q').addEventListener('input', e => {
-      const q = e.target.value.toLowerCase();
-      document.querySelectorAll('.pages li').forEach(li => {
-        li.style.display = li.textContent.toLowerCase().includes(q) ? '' : 'none';
-      });
-    });
-  </script>
+  <footer>內容僅供衛教參考，如有身體不適請先諮詢醫師或物理治療師。</footer>
 </body>
 </html>

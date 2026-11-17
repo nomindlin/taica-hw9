@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="category" content="{{分類}}">
+  <meta name="description" content="{{一句話摘要}}">
+  <title>{{主題名稱}}</title>
+  <style>
+    :root {
+      --bg: #fdf6ec; --card: #ffffff; --fg: #2b1d12; --muted: #5c4632;
+      --accent: #b4441f; --accent-soft: #fbe3d3; --warn: #8a1f11; --warn-soft: #fde2dc;
+      --ok: #3d5a1e; --ok-soft: #e7f0d8; --line: #e8d6c2;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--fg);
+           font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+           font-size: 20px; line-height: 1.8; }
+    main { max-width: 820px; margin: 0 auto; padding: 24px 20px 48px; }
+    .back { display: inline-flex; align-items: center; min-height: 52px; padding: 10px 22px;
+            background: var(--accent); color: #fff; font-size: 20px; font-weight: 700;
+            text-decoration: none; border-radius: 12px; }
+    .back:hover, .back:focus { background: #8f3216; outline: 3px solid #f0a37c; outline-offset: 2px; }
+    .tag { display: inline-block; margin-top: 24px; padding: 4px 14px; background: var(--accent-soft);
+           color: var(--accent); font-weight: 700; border-radius: 999px; font-size: 18px; }
+    h1 { font-size: 36px; line-height: 1.35; margin: 12px 0 8px; }
+    .lead { font-size: 22px; color: var(--muted); margin: 0 0 24px; }
+    section { background: var(--card); border: 2px solid var(--line); border-left-width: 10px;
+              border-radius: 14px; padding: 20px 24px; margin: 20px 0; }
+    h2 { font-size: 28px; margin: 0 0 12px; }
+    section.goal   { border-left-color: var(--ok); }
+    section.goal h2 { color: var(--ok); }
+    section.safety { border-left-color: var(--warn); background: var(--warn-soft); }
+    section.safety h2 { color: var(--warn); }
+    section.steps  { border-left-color: var(--accent); }
+    section.steps h2 { color: var(--accent); }
+    ul, ol { padding-left: 1.4em; margin: 0; }
+    li { margin: 8px 0; }
+    ol.step-list { list-style: none; padding: 0; counter-reset: s; }
+    ol.step-list li { counter-increment: s; position: relative; padding-left: 64px; margin: 18px 0; min-height: 48px; }
+    ol.step-list li::before { content: counter(s); position: absolute; left: 0; top: 0;
+            width: 48px; height: 48px; border-radius: 50%; background: var(--accent); color: #fff;
+            font-weight: 700; font-size: 24px; display: flex; align-items: center; justify-content: center; }
+    .note { font-size: 18px; color: var(--muted); }
+    footer { margin-top: 32px; padding-top: 20px; border-top: 2px solid var(--line); }
+    footer p { font-size: 18px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="../index.html">← 返回首頁</a>
+    <div class="tag">{{分類}}</div>
+    <h1>{{主題名稱}}</h1>
+    <p class="lead">{{一句話摘要}}</p>
+
+    <section class="goal">
+      <h2>🎯 動作目標</h2>
+      <ul>
+        <li>{{目標}}</li>
+      </ul>
+    </section>
+
+    <section class="safety">
+      <h2>⚠️ 安全注意事項</h2>
+      <ul>
+        <li>{{注意事項}}</li>
+        <li>如有疑慮或身體不適，請先諮詢醫師或物理治療師。</li>
+      </ul>
+    </section>
+
+    <section class="steps">
+      <h2>👣 執行步驟</h2>
+      <ol class="step-list">
+        <li>{{步驟}}</li>
+      </ol>
+    </section>
+
+    <footer>
+      <p>資料來源：<code>raw/{{raw檔名}}.md</code></p>
+      <a class="back" href="../index.html">← 返回首頁</a>
+    </footer>
+  </main>
+</body>
+</html>
